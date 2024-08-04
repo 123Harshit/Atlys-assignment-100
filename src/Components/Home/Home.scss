@@ -1,0 +1,25 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .user-details-container {
+    min-width: 736px;
+    .user-name-text {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 33.89px;
+      text-align: left;
+      color: #c5c7ca;
+      margin-bottom: 0;
+    }
+    .general-message {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #7f8084;
+      width: 580px;
+      height: 48px;
+    }
+  }
+}

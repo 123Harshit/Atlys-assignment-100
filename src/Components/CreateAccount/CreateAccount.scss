@@ -1,0 +1,98 @@
+.create-account-main-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  .create-account-container {
+    background-color: #27292d;
+    width: 463px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    border-color: 2px solid #969696;
+    .input-container {
+      width: 100%;
+      .email-input-container {
+        .email-label {
+          color: #c5c7ca;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 2.5rem 0 0.2rem 0;
+        }
+      }
+      .password-input-container {
+        .password-label {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0;
+          width: 95%;
+          .password-label-2,
+          .forgot-password {
+            color: #c5c7ca;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 2.5rem 0 0.2rem 0;
+          }
+        }
+      }
+    }
+    .welcome-text {
+      padding: 0;
+      margin: 0;
+      color: #6b6c70;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .create-account-text {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21.78px;
+      margin: 0;
+      padding: 0;
+      padding-top: 0.2rem;
+    }
+    .create-account-button {
+      width: 95%;
+      height: 43px;
+      background-color: #4a96ff;
+      border: none;
+      margin-right: 1.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    .not-registered {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      .not-registered-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: left;
+        color: #7f8084;
+      }
+      .register-nav {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.box-input {
+  border: 1.5px solid #7f8084;
+  width: 90%;
+  background: none;
+  // padding: 1rem;
+  height: 43px;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+}
