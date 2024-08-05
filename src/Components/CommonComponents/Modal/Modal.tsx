@@ -11,7 +11,6 @@ const Modal: React.FC<IModalProps> = ({ isOpen, onClose, children }) => {
 
   return (
     <div
-      onClick={onClose}
       style={{
         position: "fixed",
         top: 0,

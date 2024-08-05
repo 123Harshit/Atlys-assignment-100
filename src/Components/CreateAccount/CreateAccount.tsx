@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import "./CreateAccount.scss"
+import "./CreateAccount.scss";
 
-const CreateAccount = () => {
-
-    const navigate = useNavigate();
+const CreateAccount: React.FC<{
+  loginClicked?: () => void;
+  registerClicked?: () => void;
+  inPopUp: boolean
+}> = ({ loginClicked, registerClicked, inPopUp }) => {
+  const nav = useNavigate();
   return (
     <div className="create-account-main-container">
       <div className="create-account-container">
@@ -18,6 +21,14 @@ const CreateAccount = () => {
               placeholder="Enter your email"
             />
           </div>
+          <div className="email-input-container">
+            <p className="email-label">Username</p>
+            <input
+              type="text"
+              className="box-input"
+              placeholder="Choose a preferred username"
+            />
+          </div>
           <div className="password-input-container">
             <span className="password-label">
               <p className="password-label-2">Password</p>
@@ -30,16 +41,23 @@ const CreateAccount = () => {
             />
           </div>
         </div>
-        <button className="create-account-button" onClick={()=> {
-            navigate("/home")
-        }}>Continue</button>
+        <button
+          className="create-account-button"
+          onClick={() => {
+            inPopUp ? registerClicked && registerClicked() : nav("/home");
+          }}
+        >
+          Continue
+        </button>
         <div className="not-registered">
-          <p className="not-registered-text">Already have an account </p>
-          <p className="register-nav">{" Login ->"}</p>
+          <p className="not-registered-text">Already have an account?</p>
+          <p onClick={() => inPopUp ? loginClicked && loginClicked() : nav("/home")} className="register-nav">
+            {" Login ->"}
+          </p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CreateAccount
+export default CreateAccount;
