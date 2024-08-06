@@ -12,6 +12,7 @@ function App() {
           path="*"
           element={<div>Go to /home or /login or /register</div>}
         />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login inPopUp={false} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<CreateAccount inPopUp={false} />} />
